@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <link href='http://fonts.googleapis.com/css?family=Fresca' rel='stylesheet' type='text/css'>
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="shortcut icon" href="images/favicon.ico" />
+      <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+      <script type="text/javascript" src="js/bootstrap.min.js"></script>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta charset="utf-8">
+      <title>Electronic Portfolio</title>
+  </head>
+  <body>
+    <div class="container my-container">
+      <header>
+        <div class="row">
+          <div class="col-sm-1 col-md-1">
+            <img class="title-logo img-responsive" src="images/jennieLogo2.png" alt="Logo">
+          </div>
+          <div class="col-sm-11 col-md-11 text-right">
+            <h1><span class="turnRed">i</span> am <span class="turnGreen">J</span>ennie <span class="turnGreen">B</span>uechne<span class ="turnRed">r</span></h1>
+            <h3 class="no-margin"><span class="turnRed">i</span> <span class="turnGreen">l</span>ove to <span class="turnGreen">c</span>od<span class="turnRed">e</span></h3>
+            <h3 class="no-margin"><span class="turnRed">t</span>his is <span class="turnGreen">m</span>y <span class="turnGreen">p</span>ortfoli<span class="turnRed">o</span></h3>
+          </div>
+        </div>
+      </header>
+      <div class="row">
+        <div class="col-md-12">
+          <img src="images/rugby-banner.jpg" class="img-responsive center-block shadow" alt="Rugby ball and scrum cap on a field">
+        </div>
+      </div>
+      <div class="row text-left">
+          <div class="col-md-12">
+            <h2>Featured Work</h2>
+          </div>
+      </div>
+      <div class="row text-center">
+        <div class="col-md-4">
+          <img src="images/rugby-1.jpg" class="img-responsive center-block desaturate shadow" alt="Rugby player playing defence" data-toggle="modal" data-target="#project1">
+          <h4>Defence</h4>
+          <p class="margin-below">
+            <a href="https://www.youtube.com/watch?v=Ajr5sYKNQe4" class="appLink">https://github.com/udacity/<span>defence</span>/</a>
+          </p>
+        </div>
+        <div class="col-md-4">
+          <img src="images/rugby-2.jpg" class="img-responsive center-block desaturate shadow" alt="Rugby player getting tackled" data-toggle="modal" data-target="#project2">
+          <h4>Possession</h4>
+          <p class="margin-below">
+            <a href="https://www.youtube.com/watch?v=G9B1liryS0g" class="appLink">https://github.com/udacity/<span>possession</span>/</a>
+          </p>
+        </div>
+        <div class="col-md-4">
+          <img src="images/rugby-3.jpg" class="img-responsive center-block desaturate shadow" alt="Pregnant rugby player" data-toggle="modal" data-target="#project3">
+          <h4>Rugby Love</h4>
+          <p class="margin-below">
+            <a href="https://twitter.com/hashtag/rugbylove" class="appLink">https://github.com/udacity/<span>rugbylove</span>/</a>
+          </p>
+        </div>
+      </div>
+    </div>
+      <!-- Modal -->
+    <div class="modal fade" id="project1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title" id="myModalLabel">Defence App</h3>
+          </div>
+          <div class="modal-body">
+            <img class="img-responsive center-block" src="images/rugby-1.jpg" alt="Rugby player playing defence">
+            This app analyzes the movements of a rugby team's back line.
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+      <!-- Modal -->
+    <div class="modal fade" id="project2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title" id="myModalLabel2">Possession App</h3>
+          </div>
+          <div class="modal-body">
+            <img class="img-responsive center-block" src="images/rugby-2.jpg" alt="Rugby player getting tackled">
+            This app analyzes a player's technique when getting tackled.
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+     <!-- Modal -->
+    <div class="modal fade" id="project3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title" id="myModalLabel3">Rugby Love</h3>
+          </div>
+          <div class="modal-body">
+            <img class="img-responsive center-block" src="images/rugby-3.jpg" alt="Pregnant rugby player">
+            Rugby isn't just elegant violence. Rugby players have a lot of love to give! This app is for sharing photos of ruggers' soft sides.
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
