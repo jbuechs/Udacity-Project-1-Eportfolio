@@ -1,101 +1,109 @@
-/* -------------------- Main elements -------------------- */
+/* Main elements */
 body {
-	background-image: url("../images/concrete_seamless.png");
-	font-family: 'Lato', sans-serif;
-	text-align: center;
-	color: #333333;
-}
-header {
-	margin-bottom: 15px;
-	text-align: center;
-}
-h1 {
+	background-image: url(../images/concrete_seamless.png);
 	font-family: 'Fresca', sans-serif;
+	text-align: center;
+	color: #333;
+}
+
+header {
+	margin: 0 0 15px 0;
+	text-align: center;
+}
+
+h1 {
 	font-size: 64px;
 }
+
 h2 {
-	font-family: 'Fresca', sans-serif;
 	font-size: 40px;
 }
-h3, h4 {
-	font-family: 'Fresca', sans-serif;
+
+h3,
+h4 {
 	font-size: 32px;
 	margin: 10px;
 }
-/* -------------------- Anchor Elements -------------------- */
-a {
-	color: #333333;
+
+p
+{
+	margin: 0 0 30px 0;
+}
+
+/* Anchor Elements */
+a,
+a:hover {
+	color: #333;
 	text-decoration: none;
 	font-size: 18px;
-	padding: 15px 0px;
+	padding: 15px 0;
 }
-a:hover {
-	color: #333333;
-	text-decoration: none;
+
+a:hover span {
+	color: #b20828;
 }
-a.appLink span {
-	color: #05B224;
-	-webkit-transition: 0.5s;
-    -moz-transition: 0.5s;
-    -ms-transition: 0.5s;
-    -o-transition: 0.5s;
-    transition: 0.5s;
-}
-a.appLink:hover span{
-	color: #B20828;
-	-webkit-transition: 0.5s;
-    -moz-transition: 0.5s;
-    -ms-transition: 0.5s;
-    -o-transition: 0.5s;
-    transition: 0.5s;
-}
-/* -------------------- Images & Image Effects -------------------- */
+
+/* Images & Image Effects */
 .title-logo {
 	max-height: 120px;
 	max-width: 120px;
-	padding-top: 10px;
+	padding: 10px 0 0 0;
 }
+
 .desaturate {
 	-webkit-filter: grayscale(100%);
 	-moz-filter: grayscale(100%);
 	filter: grayscale(100%);
+}
+
+.desaturate:hover {
+	-webkit-filter: grayscale(0%);
+	-moz-filter: grayscale(0%);
+	filter: grayscale(0%);
+}
+
+.short-fade {
+	-webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+}
+
+.long-fade {
 	-webkit-transition: 1s;
     -moz-transition: 1s;
     -ms-transition: 1s;
     -o-transition: 1s;
     transition: 1s;
 }
-.desaturate:hover {
-	-webkit-filter: grayscale(0%);
-	-moz-filter: grayscale(0%);
-	filter: grayscale(0%);
-   	-webkit-transition: 1s;
-    -moz-transition: 1s;
-    -ms-transition: 1s;
-    -o-transition: 1s;
-    transition: 1s;
 
-}
+
 .shadow {
   	-webkit-box-shadow: 5px 6px 3px -1px rgba(0,0,0,0.47);
 	-moz-box-shadow: 5px 6px 3px -1px rgba(0,0,0,0.47);
 	box-shadow: 5px 6px 3px -1px rgba(0,0,0,0.47);
 }
-/* -------------------- Spacing -------------------- */
+
+/* Spacing */
 .my-container {
 	max-width: 1000px;
 }
+
 .no-margin {
 	margin: 0px;
 }
-/* -------------------- Fonts & Colors -------------------- */
-.turnGreen {
-	color: #05B224;
+
+/* Fonts & Colors */
+.turn-green {
+	color: #05b224;
 }
-.turnRed {
-	color: #B20828;
+
+.turn-red {
+	color: #b20828;
 }
-/* -------------------- Media Query - Small Breakpoint -------------------- */
+
+/* Media Query - Small Breakpoint */
 @media screen and (max-width: 588px)
 {
 	h1 {
@@ -103,7 +111,8 @@ a.appLink:hover span{
 		text-align: center;
 	}
 
-	h2, h3 {
+	h2,
+	h3 {
 		font-size: 32px;
 		text-align: center;
 	}
@@ -113,38 +122,30 @@ a.appLink:hover span{
 		max-width: 100px;
 		margin: auto;
 	}
-	.margin-below {
-		margin-bottom: 30px;
-	}
 }
-/* -------------------- Media Query - Medium Breakpoint -------------------- */
+/* Media Query - Medium Breakpoint */
 @media screen and (min-width: 589px) and (max-width: 767px)
 {
 	h1 {
 		font-size: 64px;
 		text-align: center;
 	}
-	h2, h3, h4 {
+
+	h2,
+	h3,
+	h4 {
 		text-align: center;
 	}
+
 	.title-logo {
 		margin: auto;
 	}
-	.margin-below {
-		margin-bottom: 30px;
-	}
 }
-/* -------------------- Media Query - Large Breakpoint -------------------- */
+/* Media Query - Large Breakpoint */
 @media screen and (min-width: 768px) and (max-width: 991px)
 {
-	h1 {
+	h1,
+	h3 {
 		text-align:right;
 	}
-	h3 {
-		text-align: right;
-	}
-	.margin-below {
-		margin-bottom: 30px;
-	}
 }
-
