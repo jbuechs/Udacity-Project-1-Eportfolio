@@ -49,18 +49,6 @@ a:hover span {
 	padding: 10px 0 0 0;
 }
 
-.desaturate {
-	-webkit-filter: grayscale(100%);
-	-moz-filter: grayscale(100%);
-	filter: grayscale(100%);
-}
-
-.desaturate:hover {
-	-webkit-filter: grayscale(0%);
-	-moz-filter: grayscale(0%);
-	filter: grayscale(0%);
-}
-
 .short-fade {
 	-webkit-transition: 0.5s;
     -moz-transition: 0.5s;
@@ -69,19 +57,66 @@ a:hover span {
     transition: 0.5s;
 }
 
-.long-fade {
-	-webkit-transition: 1s;
-    -moz-transition: 1s;
-    -ms-transition: 1s;
-    -o-transition: 1s;
-    transition: 1s;
-}
-
-
 .shadow {
   	-webkit-box-shadow: 5px 6px 3px -1px rgba(0,0,0,0.47);
 	-moz-box-shadow: 5px 6px 3px -1px rgba(0,0,0,0.47);
 	box-shadow: 5px 6px 3px -1px rgba(0,0,0,0.47);
+}
+
+/* Gray */
+/*! Gray v1.4.2 (https://github.com/karlhorky/gray) | MIT */
+.grayscale {
+  /* Firefox 10-34 */
+  filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='saturate' values='0'/></filter></svg>#grayscale");
+
+  /*
+    Chrome 19+,
+    Safari 6+,
+    Safari 6+ iOS,
+    Opera 15+
+  */
+  -webkit-filter: grayscale(1);
+
+  /* Firefox 35+ */
+  filter: grayscale(1);
+
+  /* IE 6-9 */
+  filter: gray;
+}
+
+.grayscale.grayscale-fade {
+  transition: filter 1s;
+}
+
+/* Webkit hack until filter is unprefixed */
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  .grayscale.grayscale-fade {
+    -webkit-transition: -webkit-filter 1s;
+    transition:         -webkit-filter 1s;
+  }
+}
+
+.grayscale.grayscale-off,
+.grayscale.grayscale-fade:hover {
+  -webkit-filter: grayscale(0);
+  filter:         grayscale(0);
+}
+
+/* Background element */
+.grayscale.grayscale-replaced {
+  -webkit-filter: none;
+  filter:         none;
+}
+
+.grayscale.grayscale-replaced > svg {
+  -webkit-transition: opacity 1s ease;
+  transition:         opacity 1s ease;
+  opacity: 1;
+}
+
+.grayscale.grayscale-replaced.grayscale-off > svg,
+.grayscale.grayscale-replaced.grayscale-fade:hover > svg {
+  opacity: 0;
 }
 
 /* Spacing */
@@ -122,6 +157,7 @@ a:hover span {
 		margin: auto;
 	}
 }
+
 /* Media Query - Medium Breakpoint */
 @media screen and (min-width: 589px) and (max-width: 767px)
 {
@@ -140,6 +176,7 @@ a:hover span {
 		margin: auto;
 	}
 }
+
 /* Media Query - Large Breakpoint */
 @media screen and (min-width: 768px) and (max-width: 991px)
 {
